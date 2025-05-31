@@ -1,9 +1,11 @@
-#include <dt-bindings/zmk/mouse.h>
-#include <behaviors/mouse_keys.dtsi>
-#include "macros.dtsi"
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/ext_power.h>
+#include "macros.dtsi"
 
 // / {
 //     chosen { zmk,matrix_transform = &default_transform; };
