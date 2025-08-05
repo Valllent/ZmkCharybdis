@@ -227,11 +227,11 @@
 
         SUPER {
             bindings = <
-&none  &none              &none             &none             &none             &none    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none
-&none  &languages_pack_1  &language_pack_2  &language_pack_3  &language_pack_4  &none    &none         &none         &none         &none         &none         &none
-&none  &none              &mkp MCLK         &mkp LCLK         &mkp RCLK         &none    &none         &none         &none         &none         &none         &none
-&none  &none              &none             &none             &none             &none    &none         &none         &none         &none         &none         &none
-                                            &none             &none             &none    &none         &none
+&none  &none              &none             &none             &none             &none    &bt BT_SEL 0     &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none
+&none  &languages_pack_1  &language_pack_2  &language_pack_3  &language_pack_4  &none    &kp KP_PLUS      &kp N7        &kp N8        &kp N9        &kp KP_DIVIDE  &none
+&none  &none              &mkp MCLK         &mkp LCLK         &mkp RCLK         &none    &kp KP_MINUS     &kp N4        &kp N5        &kp N6        &kp N0         &none
+&none  &none              &none             &none             &none             &none    &kp KP_MULTIPLY  &kp N1        &kp N2        &kp N3        &kp DOT        &none
+                                            &none             &none             &none    &none            &none
                                                               &none             &none    &none
             >;
         };
