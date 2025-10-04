@@ -55,22 +55,20 @@
 
     /* Cursor pointer */
 
-    ib_axes_to_keys_x: ib_axes_to_keys_x {
-        compatible = "zmk,input-behavior-axes-to-keys";
+    mkp_cursor_mapper_x: mkp_cursor_mapper_x {
+        compatible = "zmk,behavior-mouse-keys";
         #binding-cells = <0>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_X>;
-        negative-binding = <&kp LEFT_ARROW>;
-        positive-binding = <&kp RIGHT_ARROW>;
+        axis = "x";
+        negative-key = <&kp LEFT_ARROW>;
+        positive-key = <&kp RIGHT_ARROW>;
     };
 
-    ib_axes_to_keys_y: ib_axes_to_keys_y {
-        compatible = "zmk,input-behavior-axes-to-keys";
+    mkp_cursor_mapper_y: mkp_cursor_mapper_y {
+        compatible = "zmk,behavior-mouse-keys";
         #binding-cells = <0>;
-        evt-type = <INPUT_EV_REL>;
-        input-code = <INPUT_REL_Y>;
-        negative-binding = <&kp UP_ARROW>;
-        positive-binding = <&kp DOWN_ARROW>;
+        axis = "y";
+        negative-key = <&kp UP_ARROW>;
+        positive-key = <&kp DOWN_ARROW>;
     };
 
     trackball_cursor_listener {
@@ -80,10 +78,9 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        // Sensitivity
         scale-multiplier = <1>;
         scale-divisor = <3>;
-        bindings = <&ib_axes_to_keys_x &ib_axes_to_keys_y>;
+        bindings = <&mkp_cursor_mapper_x &mkp_cursor_mapper_y>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
