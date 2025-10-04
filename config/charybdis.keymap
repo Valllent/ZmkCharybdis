@@ -54,23 +54,6 @@
     };
 
     /* Cursor pointer */
-
-    mkp_cursor_mapper_x: mkp_cursor_mapper_x {
-        compatible = "zmk,behavior-mouse-keys";
-        #binding-cells = <0>;
-        axis = "x";
-        negative-key = <&kp LEFT_ARROW>;
-        positive-key = <&kp RIGHT_ARROW>;
-    };
-
-    mkp_cursor_mapper_y: mkp_cursor_mapper_y {
-        compatible = "zmk,behavior-mouse-keys";
-        #binding-cells = <0>;
-        axis = "y";
-        negative-key = <&kp UP_ARROW>;
-        positive-key = <&kp DOWN_ARROW>;
-    };
-
     trackball_cursor_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&vtrackball>;
@@ -80,7 +63,7 @@
         y-input-code = <INPUT_REL_Y>;
         scale-multiplier = <1>;
         scale-divisor = <3>;
-        bindings = <&mkp_cursor_mapper_x &mkp_cursor_mapper_y>;
+        bindings = <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 3>, <&zip_xy_to_scroll_mapper>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
