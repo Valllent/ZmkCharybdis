@@ -55,8 +55,8 @@
 
     /* Cursor pointer */
 
-    ib_rel_to_arrows_x: ib_rel_to_arrows_x {
-        compatible = "zmk,input-behavior-mouse-keys";
+    ib_axes_to_keys_x: ib_axes_to_keys_x {
+        compatible = "zmk,input-behavior-axes-to-keys";
         #binding-cells = <0>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_X>;
@@ -64,8 +64,8 @@
         positive-binding = <&kp RIGHT_ARROW>;
     };
 
-    ib_rel_to_arrows_y: ib_rel_to_arrows_y {
-        compatible = "zmk,input-behavior-mouse-keys";
+    ib_axes_to_keys_y: ib_axes_to_keys_y {
+        compatible = "zmk,input-behavior-axes-to-keys";
         #binding-cells = <0>;
         evt-type = <INPUT_EV_REL>;
         input-code = <INPUT_REL_Y>;
@@ -83,8 +83,7 @@
         // Sensitivity
         scale-multiplier = <1>;
         scale-divisor = <3>;
-        // Map REL to arrow keys
-        bindings = <&ib_rel_to_arrows_x &ib_rel_to_arrows_y>;
+        bindings = <&ib_axes_to_keys_x &ib_axes_to_keys_y>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
