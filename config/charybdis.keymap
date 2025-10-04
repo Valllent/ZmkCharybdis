@@ -63,8 +63,7 @@
         // Sensitivity
         scale-multiplier = <1>;
         scale-divisor = <3>;
-        bindings = <&mkp MOVE_X_TO_KEYS LEFT_ARROW RIGHT_ARROW
-                    &mkp MOVE_Y_TO_KEYS UP_ARROW DOWN_ARROW>;
+        bindings = <&mkp MOVE_X_TO_HORIZ_ARROWS &mkp MOVE_Y_TO_VERT_ARROWS>;
     };
 
     /* define a resolution down scaler only for INPUT_REL_WHEEL */
