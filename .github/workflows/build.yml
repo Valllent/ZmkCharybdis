@@ -2,6 +2,8 @@ name: ZMK Firmware
 
 on:
   push:
+    tags:
+      - build*
   workflow_dispatch:
   schedule:
     - cron: '0 0 1 */2 *' # run every two months to keep artifacts from expiring
@@ -27,11 +29,3 @@ jobs:
   build:
     needs: convert-and-store-keymap
     uses: ./.github/workflows/user_config_build.yaml
-    # uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-
-#  keymap_images:
-#    needs: build
-#    permissions:
-#      contents: write
-#    uses: ./.github/workflows/draw_keymaps.yaml
-    # credit to https://github.com/caksoylar/keymap-drawer
