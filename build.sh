@@ -7,7 +7,7 @@ CONFIG_PATH="config"
 KEYMAP_PATH="boards/shields/charybdis/keymaps"
 FALLBACK_BINARY="bin"
 PROJECT_ROOT_DIR=$(pwd)
-FIRMWARE_OUTPUT_DIR="${PROJECT_ROOT_DIR}/firmware_output"
+FIRMWARE_OUTPUT_DIR="${PROJECT_ROOT_DIR}/.output"
 BUILD_WORK_DIR="${PROJECT_ROOT_DIR}/.build"  # Рабочая директория внутри проекта
 
 echo "SCRIPT: Установка зависимостей..."
@@ -86,7 +86,7 @@ echo "$BUILD_MATRIX" | jq -c '.include[]' | while read -r item; do
     # Копируем только нужные файлы (без .git и служебных директорий)
     rsync -a \
         --exclude='.git' \
-        --exclude='firmware_output' \
+        --exclude='.output' \
         --exclude='.build' \
         "${PROJECT_ROOT_DIR}/" "${ISOLATED_PROJECT_DIR}/"
 
