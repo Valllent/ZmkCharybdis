@@ -1,20 +1,20 @@
 ---
 include:
   # Left
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: charybdis_left
     keymap: qwerty
     format: bt
     artifact-name: charybdis_qwerty_left
   # Right
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: charybdis_right
     keymap: qwerty
     format: bt
     artifact-name: charybdis_qwerty_right
     snippet: studio-rpc-usb-uart
   # Firmware Reset
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: settings_reset
     format: reset
     artifact-name: firmware_reset_nano_v2
